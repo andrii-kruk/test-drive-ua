@@ -1,13 +1,15 @@
-import { NavLink } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 
 const SideBar = () => {
-  return <aside>
-    <nav>
+  return (
+    <aside>
+      <nav>
         <NavLink to="/">Home</NavLink>
-        <NavLink to="/catalog">Catalog</NavLink>
-        <NavLink to="/favorite">Favorite</NavLink>
-    </nav>
-  </aside>;
+        <NavLink to="catalog">Catalog</NavLink>
+        <NavLink to="favorites">Favorite</NavLink>
+      </nav>
+    </aside>
+  );
 };
 
 export default SideBar;
