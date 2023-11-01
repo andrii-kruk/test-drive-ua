@@ -1,4 +1,4 @@
-import { Suspense, lazy } from 'react';
+import { lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Layout from './Layout/Layout';
 
@@ -8,14 +8,12 @@ const FavoritePage = lazy(() => import('pages/FavoritePage/FavoritePage'));
 
 export const App = () => {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<MainPage />} />
-          <Route path="catalog" element={<CatalogPage />} />
-          <Route path="favorite" element={<FavoritePage />} />
-        </Route>
-      </Routes>
-    </Suspense>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<MainPage />} />
+        <Route path="catalog" element={<CatalogPage />} />
+        <Route path="favorite" element={<FavoritePage />} />
+      </Route>
+    </Routes>
   );
 };
