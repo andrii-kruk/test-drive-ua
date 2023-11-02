@@ -8,9 +8,32 @@ const $instance = axios.create({
 export const getCars = createAsyncThunk('cars/getCars', async (_, thunkAPI) => {
   try {
     const { data } = await $instance.get('/cars');
-    console.log({ data });
-    return { data };
+    return data;
   } catch (error) {
     thunkAPI.rejectWithValue(error.message);
   }
 });
+
+export const addFavorite = createAsyncThunk(
+  'cars/addFavorite',
+  async (id, thunkAPI) => {
+    try {
+      const { data } = await $instance.get(`/cars/${id}`);
+      return data;
+    } catch (error) {
+      thunkAPI.rejectWithValue(error);
+    }
+  }
+);
+
+export const deleteFavorite = createAsyncThunk(
+  'cars/deleteFavorite',
+  async (id, thunkAPI) => {
+    try {
+      const { data } = await $instance.get(`/cars/${id}`);
+      return data;
+    } catch (error) {
+      thunkAPI.rejectWithValue(error);
+    }
+  }
+);
