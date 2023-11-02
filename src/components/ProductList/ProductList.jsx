@@ -23,6 +23,7 @@ const ProductList = () => {
 
       if (response.payload.length === 0)
         return btn.classList.add('visually-hidden');
+
       if (response.payload.length > 0 && response.payload.length < 12)
         return setVisible(prevValue => prevValue + response.payload.length);
 

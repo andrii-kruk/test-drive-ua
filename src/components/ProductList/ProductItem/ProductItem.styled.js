@@ -72,30 +72,7 @@ export const ItemDescription = styled.p`
   margin: 0;
 `;
 
-export const ItemBtnLearnMore = styled.button`
-  display: block;
-  width: 274px;
 
-  padding: 12px 99px;
-
-  color: #ffffff;
-  font-family: Manrope;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.4;
-
-  border: none;
-  border-radius: 12px;
-  background-color: #3470ff;
-
-  transition: 300ms background-color ease-in-out;
-  cursor: pointer;
-
-  &:hover,
-  &:focus {
-    background-color: #0b44cd;
-  }
-`;
 export const ItemBtnFavorite = styled.button`
   position: absolute;
   top: 14px;

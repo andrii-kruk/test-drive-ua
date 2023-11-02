@@ -6,7 +6,6 @@ import sprite from 'assets/sprite.svg';
 import {
   Item,
   ItemBtnFavorite,
-  ItemBtnLearnMore,
   ItemDescription,
   ItemIcon,
   ItemImg,
@@ -17,6 +16,7 @@ import {
   ItemTitle,
   ItemWrapper,
 } from './ProductItem.styled';
+import BtnText from 'components/BtnText/BtnText';
 
 const ProductItem = ({ item }) => {
   const {
@@ -84,7 +84,12 @@ const ProductItem = ({ item }) => {
           <use href={sprite + '#icon-heart'}></use>
         </ItemIcon>
       </ItemBtnFavorite>
-      <ItemBtnLearnMore type="button">Learn more</ItemBtnLearnMore>
+      <BtnText
+        type="button"
+        size="l"
+        text="Learn more"
+        handleClick={() => item}
+      />
     </Item>
   );
 };
