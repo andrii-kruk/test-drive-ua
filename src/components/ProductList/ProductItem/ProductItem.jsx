@@ -6,16 +6,17 @@ import sprite from 'assets/sprite.svg';
 import {
   Item,
   ItemBtnFavorite,
-  ItemBtnLearnMore,
   ItemDescription,
   ItemIcon,
   ItemImg,
+  ItemImgWrapper,
   ItemMainWrapper,
   ItemModel,
   ItemPrice,
   ItemTitle,
   ItemWrapper,
 } from './ProductItem.styled';
+import BtnText from 'components/BtnText/BtnText';
 
 const ProductItem = ({ item }) => {
   const {
@@ -51,7 +52,15 @@ const ProductItem = ({ item }) => {
   return (
     <Item>
       <ItemMainWrapper>
-        <ItemImg src={img} alt={model} width={274} height={268} />
+        <ItemImgWrapper>
+          <ItemImg
+            src={img}
+            alt={model}
+            width={274}
+            height={268}
+            loading="lazy"
+          />
+        </ItemImgWrapper>
         <ItemWrapper>
           <ItemTitle>
             {make} <ItemModel>{model}</ItemModel>, {year}
@@ -75,7 +84,12 @@ const ProductItem = ({ item }) => {
           <use href={sprite + '#icon-heart'}></use>
         </ItemIcon>
       </ItemBtnFavorite>
-      <ItemBtnLearnMore type="button">Learn more</ItemBtnLearnMore>
+      <BtnText
+        type="button"
+        size="l"
+        text="Learn more"
+        handleClick={() => item}
+      />
     </Item>
   );
 };
