@@ -51,7 +51,13 @@ const ProductItem = ({ item }) => {
   return (
     <Item>
       <ItemMainWrapper>
-        <ItemImg src={img} alt={model} width={274} height={268} />
+        <ItemImg
+          src={img}
+          alt={model}
+          width={274}
+          height={268}
+          loading="lazy"
+        />
         <ItemWrapper>
           <ItemTitle>
             {make} <ItemModel>{model}</ItemModel>, {year}

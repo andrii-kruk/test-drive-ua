@@ -18,7 +18,7 @@ export const carsSlice = createSlice({
       })
       .addCase(getCars.fulfilled, (state, { payload }) => {
         state.isLoading = false;
-        state.items = payload;
+        state.items = [...state.items, ...payload];
         state.error = null;
       })
       .addCase(getCars.rejected, (state, { payload }) => {
