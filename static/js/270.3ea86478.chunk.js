@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkdrive_ua=self.webpackChunkdrive_ua||[]).push([[270],{270:function(e,n,u){u.r(n);var a=u(791),c=u(434),r=u(781),t=u(184);n.default=function(){var e=(0,c.I0)();return(0,a.useEffect)((function(){e((0,r.R)())}),[e]),(0,t.jsx)("section",{children:(0,t.jsx)("h1",{children:"CatalogPage"})})}}}]);
-//# sourceMappingURL=270.3ea86478.chunk.js.map
