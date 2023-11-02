@@ -10,6 +10,7 @@ import {
   ItemDescription,
   ItemIcon,
   ItemImg,
+  ItemImgWrapper,
   ItemMainWrapper,
   ItemModel,
   ItemPrice,
@@ -51,13 +52,15 @@ const ProductItem = ({ item }) => {
   return (
     <Item>
       <ItemMainWrapper>
-        <ItemImg
-          src={img}
-          alt={model}
-          width={274}
-          height={268}
-          loading="lazy"
-        />
+        <ItemImgWrapper>
+          <ItemImg
+            src={img}
+            alt={model}
+            width={274}
+            height={268}
+            loading="lazy"
+          />
+        </ItemImgWrapper>
         <ItemWrapper>
           <ItemTitle>
             {make} <ItemModel>{model}</ItemModel>, {year}

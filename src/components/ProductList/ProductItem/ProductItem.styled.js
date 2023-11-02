@@ -14,10 +14,26 @@ export const ItemMainWrapper = styled.div`
   width: 100%;
 `;
 
-export const ItemImg = styled.img`
-  border-radius: 14px;
+export const ItemImgWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  height: 268px;
+
   margin-bottom: 14px;
+
+  border-radius: 14px;
+
+  background: linear-gradient(
+    180deg,
+    rgba(18, 20, 23, 0.5) 2.5%,
+    rgba(18, 20, 23, 0) 41.07%
+  );
+
+  overflow: hidden;
+  z-index: 2;
 `;
+
+export const ItemImg = styled.img``;
 
 export const ItemWrapper = styled.div`
   display: flex;
@@ -96,6 +112,7 @@ export const ItemBtnFavorite = styled.button`
   border: none;
 
   cursor: pointer;
+  z-index: 3;
 
   &.active > svg {
     fill: #3470ff;

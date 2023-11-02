@@ -3,14 +3,16 @@ import { getCars } from 'redux/cars/carsOperations';
 import ProductItem from './ProductItem/ProductItem';
 import { BtnLoadMore, List } from './ProductList.styled';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectCars } from 'redux/cars/carsSelectors';
+import { selectCars, selectIsLoading } from 'redux/cars/carsSelectors';
 
 const ProductList = () => {
   const dispatch = useDispatch();
-  const cars = useSelector(selectCars);
+
   const [visible, setVisible] = useState(12);
   const [page, setPage] = useState(1);
 
+  const cars = useSelector(selectCars);
+  const isLoading = useSelector(selectIsLoading);
   const onLoadMore = async event => {
     const btn = event.currentTarget;
     try {
@@ -44,7 +46,8 @@ const ProductList = () => {
         ))}
       </List>
       <BtnLoadMore type="button" onClick={onLoadMore}>
-        LoadMore
+        {isLoading && 'Loading...'}
+        {!isLoading && 'Load more'}
       </BtnLoadMore>
     </>
   );
