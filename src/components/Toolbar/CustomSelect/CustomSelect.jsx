@@ -16,8 +16,8 @@ const CustomSelect = ({ options, onChange, text, size }) => {
 
   const toggleSelect = event => {
     setIsOpen(!isOpen);
-    if (!isOpen) return event.target.classList.add('open');
-    event.target.classList.remove('open');
+    if (!isOpen) return event.currentTarget.classList.add('open');
+    event.currentTarget.classList.remove('open');
   };
 
   const handleOptionClick = option => {

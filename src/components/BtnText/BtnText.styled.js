@@ -23,15 +23,34 @@ export const Button = styled.button`
     background-color: #0b44cd;
   }
 
-  &.s {
+  &.xs {
     width: 79px;
+
+    padding: 0;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+
     background-color: transparent;
     color: #3470ff;
+
+    text-decoration-line: underline;
   }
 
-  &.s:hover,
-  &.s:focus {
+  &.xs:hover,
+  &.xs:focus {
     color: #0b44cd;
+  }
+
+  &.s {
+    position: relative;
+    top: 14px;
+    width: 136px;
+    padding: 14px 44px;
   }
 
   &.m {

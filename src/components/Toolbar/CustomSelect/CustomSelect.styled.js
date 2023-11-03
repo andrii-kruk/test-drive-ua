@@ -16,6 +16,8 @@ export const Select = styled.div`
   font-weight: 500;
   line-height: 1.1;
 
+  cursor: pointer;
+
   &.s {
     width: 125px;
   }

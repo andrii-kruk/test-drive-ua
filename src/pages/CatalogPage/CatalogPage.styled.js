@@ -1,3 +1,5 @@
-// import styled from 'styled-components'
+import styled from 'styled-components';
 
-// export const Element = styled.div``
+export const Section = styled.section`
+  padding: 64px 0;
+`;
