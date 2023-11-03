@@ -1,5 +1,5 @@
 import styled from 'styled-components';
 
-export const Section = styled.section`
+export const PageContainer = styled.div`
   padding: 64px 0;
 `;

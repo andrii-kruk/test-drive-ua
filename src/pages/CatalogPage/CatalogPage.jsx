@@ -1,13 +1,13 @@
 import ProductList from 'components/ProductList/ProductList';
 import Toolbar from 'components/Toolbar/Toolbar';
-import { Section } from './CatalogPage.styled';
+import { PageContainer } from './CatalogPage.styled';
 
 const CatalogPage = () => {
   return (
-    <Section>
+    <PageContainer>
       <Toolbar />
       <ProductList />
-    </Section>
+    </PageContainer>
   );
 };
 

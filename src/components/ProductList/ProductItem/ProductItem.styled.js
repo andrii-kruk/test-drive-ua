@@ -71,38 +71,3 @@ export const ItemDescription = styled.p`
   line-height: 1.5;
   margin: 0;
 `;
-
-
-export const ItemBtnFavorite = styled.button`
-  position: absolute;
-  top: 14px;
-  right: 14px;
-
-  padding: 0;
-
-  display: block;
-  width: 18px;
-  height: 18px;
-
-  background-color: transparent;
-
-  border: none;
-
-  cursor: pointer;
-  z-index: 3;
-
-  &.active > svg {
-    fill: #3470ff;
-    stroke: #3470ff;
-  }
-`;
-
-export const ItemIcon = styled.svg`
-  fill: transparent;
-  stroke: #ffffff;
-
-  & > use {
-    width: 18px;
-    height: 18px;
-  }
-`;

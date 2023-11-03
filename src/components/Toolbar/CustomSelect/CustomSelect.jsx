@@ -3,12 +3,11 @@ import {
   OptionItem,
   OptionsList,
   Select,
-  SelectArrow,
   SelectContainer,
   Wrapper,
 } from './CustomSelect.styled';
 
-import sprite from 'assets/sprite.svg';
+import BtnIcon from 'components/BtnIcon/BtnIcon';
 
 const CustomSelect = ({ options, onChange, text, size }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,9 +33,16 @@ const CustomSelect = ({ options, onChange, text, size }) => {
         <Select className={size}>
           <SelectContainer onClick={toggleSelect}>
             {selectedOption ? selectedOption : text}
-            <SelectArrow width={20} height={20}>
-              <use href={sprite + '#icon-arrow'}></use>
-            </SelectArrow>
+            <BtnIcon
+              type="button"
+              size="m"
+              w="20"
+              h="20"
+              handleClick={toggleSelect}
+              icon="#icon-arrow"
+              aria="Open dropdown"
+              secondClass={isOpen ? 'open' : ''}
+            />
           </SelectContainer>
         </Select>
         {isOpen && (

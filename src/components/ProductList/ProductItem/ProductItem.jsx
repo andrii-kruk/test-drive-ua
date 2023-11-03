@@ -2,12 +2,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addFavorite, deleteFavorite } from 'redux/cars/carsOperations';
 import { selectFavorites } from 'redux/cars/carsSelectors';
 
-import sprite from 'assets/sprite.svg';
 import {
   Item,
-  ItemBtnFavorite,
   ItemDescription,
-  ItemIcon,
   ItemImg,
   ItemImgWrapper,
   ItemMainWrapper,
@@ -17,6 +14,7 @@ import {
   ItemWrapper,
 } from './ProductItem.styled';
 import BtnText from 'components/BtnText/BtnText';
+import BtnIcon from 'components/BtnIcon/BtnIcon';
 
 const ProductItem = ({ item }) => {
   const {
@@ -72,18 +70,18 @@ const ProductItem = ({ item }) => {
           {mileage} | {functionalities[0]}
         </ItemDescription>
       </ItemMainWrapper>
-      <ItemBtnFavorite
+      <BtnIcon
         type="button"
-        aria-label="favorite button"
-        onClick={onFavoriteBtn(id)}
-        className={
+        size="s"
+        aria="Button favorite"
+        icon="#icon-heart"
+        handleClick={onFavoriteBtn(id)}
+        secondClass={
           favorites.some(favorite => favorite.id === id) ? 'active' : ''
         }
-      >
-        <ItemIcon width={18} height={18}>
-          <use href={sprite + '#icon-heart'}></use>
-        </ItemIcon>
-      </ItemBtnFavorite>
+        w="18"
+        h="18"
+      />
       <BtnText
         type="button"
         size="l"
