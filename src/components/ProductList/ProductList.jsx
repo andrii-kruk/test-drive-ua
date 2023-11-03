@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
 import { getCars } from 'redux/cars/carsOperations';
 import ProductItem from './ProductItem/ProductItem';
-import { BtnLoadMore, List } from './ProductList.styled';
+import { List } from './ProductList.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectCars, selectIsLoading } from 'redux/cars/carsSelectors';
+import BtnText from 'components/BtnText/BtnText';
 
 const ProductList = () => {
   const dispatch = useDispatch();
@@ -46,10 +47,12 @@ const ProductList = () => {
           <ProductItem item={item} key={item.id} />
         ))}
       </List>
-      <BtnLoadMore type="button" onClick={onLoadMore}>
-        {isLoading && 'Loading...'}
-        {!isLoading && 'Load more'}
-      </BtnLoadMore>
+      <BtnText
+        type="button"
+        size="xs"
+        text={isLoading ? 'Loading...' : 'Load more'}
+        handleClick={onLoadMore}
+      />
     </>
   );
 };

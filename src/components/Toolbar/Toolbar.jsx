@@ -1,3 +1,4 @@
+import BtnText from 'components/BtnText/BtnText';
 import CustomSelect from './CustomSelect/CustomSelect';
 import {
   ToolbarInputFrom,
@@ -43,7 +44,7 @@ const Toolbar = () => {
         </ToolbarGroup>
       </ToolbarContainer>
 
-      <button type="submit">Search</button>
+      <BtnText type="submit" size="s" text="Search" handleClick={() => {}} />
     </ToolbarForm>
   );
 };

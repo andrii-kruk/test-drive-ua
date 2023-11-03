@@ -1,13 +1,14 @@
 import styled from 'styled-components';
 
 export const ToolbarForm = styled.form`
-  width: 859px;
+  width: 879px;
   margin-left: auto;
   margin-right: auto;
 
   display: flex;
   gap: 18px;
   align-items: center;
+  margin-bottom: 50px;
 `;
 
 export const ToolbarContainer = styled.div`
@@ -64,11 +65,4 @@ export const ToolbarInputTo = styled.input`
   line-height: 1.1;
 
   outline: none;
-`;
-
-export const ToolbarDropdown = styled.select`
-  padding: 14px 18px;
-  border: none;
-  border-radius: 14px;
-  background: #f7f7fb;
 `;
