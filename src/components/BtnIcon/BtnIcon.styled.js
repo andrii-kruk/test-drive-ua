@@ -46,7 +46,18 @@ export const Button = styled.button`
     transform: rotate(180deg);
   }
 
-  &.l {
+  &.l,
+  &.l > svg > use {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+
+  &.l > svg {
+    fill: transparent;
+    stroke: #000000;
   }
 
   &.xl,

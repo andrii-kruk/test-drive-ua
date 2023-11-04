@@ -1,4 +1,8 @@
-import { Navigation, NavigationLink, StyledSideBar } from './SideBar.styled';
+import {
+  Navigation,
+  NavigationLink,
+  StyledSideBar,
+} from './SideBar.styled';
 import { HiMenuAlt3 } from 'react-icons/hi';
 import { useState } from 'react';
 import BtnIcon from 'components/BtnIcon/BtnIcon';

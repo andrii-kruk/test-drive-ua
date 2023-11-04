@@ -8,7 +8,7 @@ const BtnIcon = ({
   children,
   size,
   aria,
-  secondClass,
+  secondClass = '',
   w,
   h,
 }) => {
