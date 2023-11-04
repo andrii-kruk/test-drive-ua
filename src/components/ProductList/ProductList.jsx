@@ -20,7 +20,6 @@ const ProductList = () => {
       setPage(prevPage => prevPage + 1);
 
       const response = await dispatch(getCars({ page: page + 1 }));
-      console.log('response: ', response);
 
       if (response.payload.length === 0)
         return btn.classList.add('visually-hidden');

@@ -11,19 +11,54 @@ import {
 
 import makes from 'assets/makes.json';
 import prices from 'assets/prices.json';
+import { useState } from 'react';
 
 const Toolbar = () => {
+  const [brand, setBrand] = useState('');
+  const [price, setPrice] = useState('');
+
+  const handleSubmit = event => {
+    event.preventDefault();
+    const mileageFrom = event.target.elements.mileageFrom.value;
+    const mileageTo = event.target.elements.mileageTo.value;
+
+    const filters = {
+      brand,
+      price,
+      mileageFrom,
+      mileageTo,
+    };
+    return filters;
+  };
+
+  const getBrand = value => {
+    setBrand(value);
+  };
+
+  const getPrice = value => {
+    setPrice(value);
+  };
   return (
-    <ToolbarForm>
+    <ToolbarForm onSubmit={handleSubmit}>
       <ToolbarContainer>
         <ToolbarGroup>
-          <ToolbarLabel htmlFor="brand">Car brand</ToolbarLabel>
-          <CustomSelect options={makes} text="Choose make" size="m" />
+          <ToolbarLabel>Car brand</ToolbarLabel>
+          <CustomSelect
+            options={makes}
+            text="Choose make"
+            size="m"
+            onChange={getBrand}
+          />
         </ToolbarGroup>
 
         <ToolbarGroup>
-          <ToolbarLabel htmlFor="price">Price/ 1 hour</ToolbarLabel>
-          <CustomSelect options={prices} text="To $" size="s" />
+          <ToolbarLabel>Price/ 1 hour</ToolbarLabel>
+          <CustomSelect
+            options={prices}
+            text="To $"
+            size="s"
+            onChange={getPrice}
+          />
         </ToolbarGroup>
         <ToolbarGroup>
           <ToolbarLabel htmlFor="mileage">Car mileage / km</ToolbarLabel>
@@ -44,7 +79,7 @@ const Toolbar = () => {
         </ToolbarGroup>
       </ToolbarContainer>
 
-      <BtnText type="submit" size="s" text="Search" handleClick={() => {}} />
+      <BtnText type="submit" size="s" text="Search" />
     </ToolbarForm>
   );
 };
