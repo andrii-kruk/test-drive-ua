@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { addFavorite, deleteFavorite } from 'redux/cars/carsOperations';
-import { selectFavorites } from 'redux/cars/carsSelectors';
+import { addFavorite, deleteFavorite } from 'redux/favorites/favoritesOperations';
+import { selectFavorites } from 'redux/favorites/favoritesSelectors';
 import RentalModal from 'components/RentalModal/RentalModal';
 import Modal from 'components/Modal/Modal';
 

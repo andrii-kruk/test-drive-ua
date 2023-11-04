@@ -5,7 +5,7 @@ export const StyledSideBar = styled.aside`
   display: flex;
   flex-direction: row-reverse;
   position: relative;
-  width: 280px;
+  width: 300px;
   padding: 32px 16px 32px 32px;
 
   border: 1px solid rgba(18, 20, 23, 0.05);

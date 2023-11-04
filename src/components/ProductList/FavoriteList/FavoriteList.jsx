@@ -1,7 +1,7 @@
 import BtnText from 'components/BtnText/BtnText';
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-import { selectFavorites } from 'redux/cars/carsSelectors';
+import { selectFavorites } from 'redux/favorites/favoritesSelectors';
 import ProductItem from '../ProductItem/ProductItem';
 import { List } from '../ProductList.styled';
 import { Info } from './FavoriteList.styled';
