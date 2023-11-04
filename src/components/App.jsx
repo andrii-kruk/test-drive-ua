@@ -5,7 +5,6 @@ import Layout from './Layout/Layout';
 const MainPage = lazy(() => import('pages/MainPage/MainPage'));
 const CatalogPage = lazy(() => import('pages/CatalogPage/CatalogPage'));
 const FavoritePage = lazy(() => import('pages/FavoritePage/FavoritePage'));
-const ErrorPage = lazy(() => import('pages/ErrorPage/ErrorPage'));
 
 export const App = () => {
   return (
@@ -15,7 +14,6 @@ export const App = () => {
         <Route path="catalog" element={<CatalogPage />} />
         <Route path="favorites" element={<FavoritePage />} />
       </Route>
-      <Route path="*" element={<ErrorPage />} />
     </Routes>
   );
 };
