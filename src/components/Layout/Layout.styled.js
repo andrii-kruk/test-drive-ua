@@ -9,4 +9,5 @@ export const PageContainer = styled.section`
   flex-direction: column;
 
   padding: 0 120px;
+  width: 100%;
 `;

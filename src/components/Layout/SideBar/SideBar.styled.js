@@ -18,7 +18,7 @@ export const StyledSideBar = styled.aside`
     right: 0;
   }
   &.close {
-    right: 208px;
+    right: 193px;
   }
 `;
 
