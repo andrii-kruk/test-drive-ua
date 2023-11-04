@@ -1,26 +1,26 @@
 {
   "files": {
     "main.css": "/test-drive-ua/static/css/main.cfbd2404.css",
-    "main.js": "/test-drive-ua/static/js/main.c8568fe8.js",
+    "main.js": "/test-drive-ua/static/js/main.096a8846.js",
     "static/js/452.232a914a.chunk.js": "/test-drive-ua/static/js/452.232a914a.chunk.js",
-    "static/js/722.f8925983.chunk.js": "/test-drive-ua/static/js/722.f8925983.chunk.js",
-    "static/js/784.ee3004b9.chunk.js": "/test-drive-ua/static/js/784.ee3004b9.chunk.js",
+    "static/js/993.4a9d48db.chunk.js": "/test-drive-ua/static/js/993.4a9d48db.chunk.js",
+    "static/js/784.e88ae9aa.chunk.js": "/test-drive-ua/static/js/784.e88ae9aa.chunk.js",
     "static/css/839.1ff80099.chunk.css": "/test-drive-ua/static/css/839.1ff80099.chunk.css",
     "static/js/839.b13a573c.chunk.js": "/test-drive-ua/static/js/839.b13a573c.chunk.js",
-    "static/js/518.946f365c.chunk.js": "/test-drive-ua/static/js/518.946f365c.chunk.js",
+    "static/js/526.2052d499.chunk.js": "/test-drive-ua/static/js/526.2052d499.chunk.js",
     "static/media/sprite.svg": "/test-drive-ua/static/media/sprite.b0bf737fcd660e581f0c0459e1db48eb.svg",
     "index.html": "/test-drive-ua/index.html",
     "main.cfbd2404.css.map": "/test-drive-ua/static/css/main.cfbd2404.css.map",
-    "main.c8568fe8.js.map": "/test-drive-ua/static/js/main.c8568fe8.js.map",
+    "main.096a8846.js.map": "/test-drive-ua/static/js/main.096a8846.js.map",
     "452.232a914a.chunk.js.map": "/test-drive-ua/static/js/452.232a914a.chunk.js.map",
-    "722.f8925983.chunk.js.map": "/test-drive-ua/static/js/722.f8925983.chunk.js.map",
-    "784.ee3004b9.chunk.js.map": "/test-drive-ua/static/js/784.ee3004b9.chunk.js.map",
+    "993.4a9d48db.chunk.js.map": "/test-drive-ua/static/js/993.4a9d48db.chunk.js.map",
+    "784.e88ae9aa.chunk.js.map": "/test-drive-ua/static/js/784.e88ae9aa.chunk.js.map",
     "839.1ff80099.chunk.css.map": "/test-drive-ua/static/css/839.1ff80099.chunk.css.map",
     "839.b13a573c.chunk.js.map": "/test-drive-ua/static/js/839.b13a573c.chunk.js.map",
-    "518.946f365c.chunk.js.map": "/test-drive-ua/static/js/518.946f365c.chunk.js.map"
+    "526.2052d499.chunk.js.map": "/test-drive-ua/static/js/526.2052d499.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cfbd2404.css",
-    "static/js/main.c8568fe8.js"
+    "static/js/main.096a8846.js"
   ]
 }
