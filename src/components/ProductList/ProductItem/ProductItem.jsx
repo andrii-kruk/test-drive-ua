@@ -19,7 +19,7 @@ import {
 import BtnText from 'components/BtnText/BtnText';
 import BtnIcon from 'components/BtnIcon/BtnIcon';
 import { useState } from 'react';
-import { splitString, toggleClass } from 'utils';
+import { splittingString, toggleClassName } from 'utils';
 
 const ProductItem = ({ item }) => {
   const {
@@ -39,17 +39,17 @@ const ProductItem = ({ item }) => {
   const dispatch = useDispatch();
   const favorites = useSelector(selectFavorites);
 
-  const address = splitString(item.address, ',');
+  const address = splittingString(item.address, ',');
 
   const onFavoriteBtn = id => event => {
     const btn = event.currentTarget;
 
     if (btn.classList.contains('active')) {
-      toggleClass(btn, 'active');
+      toggleClassName(btn, 'active');
       dispatch(deleteFavorite(id));
       return;
     }
-    toggleClass(btn, 'active');
+    toggleClassName(btn, 'active');
     dispatch(addFavorite(id));
   };
 

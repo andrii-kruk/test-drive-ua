@@ -1,4 +1,4 @@
-import { splitString, joinString, formatNumberWithCommas } from 'utils/index';
+import { splittingString, joiningString, formatNumber } from 'utils/index';
 
 import {
   Condition,
@@ -15,8 +15,8 @@ import {
 } from './RentalModal.styled';
 
 const RentalModal = ({ content }) => {
-  const address = splitString(content.address, ',');
-  const conditions = splitString(content.rentalConditions, ',');
+  const address = splittingString(content.address, ',');
+  const conditions = splittingString(content.rentalConditions, ',');
 
   return (
     <RentalContainer>
@@ -38,16 +38,16 @@ const RentalModal = ({ content }) => {
       <RentalDescription>{content.description}</RentalDescription>
       <RentalSubtitle>Accessories and functionalities:</RentalSubtitle>
       <RentalAccessories>
-        {joinString(content.accessories, ' | ')}
+        {joiningString(content.accessories, ' | ')}
       </RentalAccessories>
       <RentalFunctionalities>
-        {joinString(content.functionalities, ' | ')}
+        {joiningString(content.functionalities, ' | ')}
       </RentalFunctionalities>
       <RentalSubtitle>Rental conditions:</RentalSubtitle>
       <ConditionsContainer>
         <div>
           {conditions.map(condition => {
-            const [key, value] = splitString(condition, ':');
+            const [key, value] = splittingString(condition, ':');
 
             if (value)
               return (
@@ -60,7 +60,7 @@ const RentalModal = ({ content }) => {
         </div>
         <div>
           <Condition>
-            Mileage: <span>{formatNumberWithCommas(content.mileage)}</span>
+            Mileage: <span>{formatNumber(content.mileage)}</span>
           </Condition>
           <Condition>
             Price: <span>{content.rentalPrice}</span>

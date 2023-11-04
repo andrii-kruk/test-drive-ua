@@ -8,7 +8,7 @@ import {
 } from './CustomSelect.styled';
 
 import BtnIcon from 'components/BtnIcon/BtnIcon';
-import { toggleClass } from 'utils';
+import { toggleClassName } from 'utils';
 
 const CustomSelect = ({ options, onChange, text, size }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +16,7 @@ const CustomSelect = ({ options, onChange, text, size }) => {
 
   const toggleSelect = event => {
     setIsOpen(!isOpen);
-    toggleClass(event.currentTarget, 'open');
+    toggleClassName(event.currentTarget, 'open');
   };
 
   const handleOptionClick = option => {

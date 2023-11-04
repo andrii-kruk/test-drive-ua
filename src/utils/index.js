@@ -1,4 +1,4 @@
-export { splitString as splitString } from './helpers/splitString';
-export { joinString as joinString } from './helpers/joinString';
-export { formatNumberWithCommas as formatNumberWithCommas } from './helpers/formatNumberWithCommas';
-export { toggleClass as toggleClass } from './helpers/toggleClass';
+export { splitString as splittingString } from './helpers/splitString';
+export { joinString as joiningString } from './helpers/joinString';
+export { formatNumberWithCommas as formatNumber } from './helpers/formatNumberWithCommas';
+export { toggleClass as toggleClassName } from './helpers/toggleClass';
