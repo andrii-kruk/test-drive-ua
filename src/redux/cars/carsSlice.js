@@ -18,7 +18,14 @@ export const carsSlice = createSlice({
       })
       .addCase(getCars.fulfilled, (state, { payload }) => {
         state.isLoading = false;
-        state.items = [...state.items, ...payload];
+
+        const uniquePayload = payload.filter(newItem => {
+          return !state.items.some(
+            existingItem => existingItem.id === newItem.id
+          );
+        });
+
+        state.items = [...state.items, ...uniquePayload];
         state.error = null;
       })
       .addCase(getCars.rejected, (state, { payload }) => {

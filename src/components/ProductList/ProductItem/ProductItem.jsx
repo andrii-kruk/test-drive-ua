@@ -30,7 +30,6 @@ const ProductItem = ({ item }) => {
     rentalPrice,
     rentalCompany,
     type,
-    mileage,
     functionalities,
     id,
   } = item;
@@ -77,8 +76,8 @@ const ProductItem = ({ item }) => {
             <ItemPrice>{rentalPrice}</ItemPrice>
           </ItemWrapper>
           <ItemDescription>
-            {address[2]} | {address[1]} | {rentalCompany} | {type} | {model} |
-            {mileage} | {functionalities[0]}
+            {address[2]} | {address[1]} | {rentalCompany} | {type} | {model} |{' '}
+            {id} | {functionalities[0]}
           </ItemDescription>
         </ItemMainWrapper>
         <BtnIcon

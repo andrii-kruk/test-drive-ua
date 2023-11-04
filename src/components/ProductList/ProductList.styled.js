@@ -12,23 +12,3 @@ export const List = styled.ul`
   list-style-type: none;
   padding: 0;
 `;
-
-export const BtnLoadMore = styled.button`
-  display: block;
-  min-width: 79px;
-  margin-left: auto;
-  margin-right: auto;
-
-  border: none;
-  background-color: transparent;
-
-  font-family: Manrope;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1, 5;
-
-  color: #3470ff;
-  text-decoration-line: underline;
-
-  cursor: pointer;
-`;
