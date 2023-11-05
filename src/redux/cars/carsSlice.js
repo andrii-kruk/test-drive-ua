@@ -7,7 +7,6 @@ export const carsSlice = createSlice({
   name: 'cars',
   initialState: {
     items: [],
-    favorites: [],
     isLoading: false,
     error: null,
   },

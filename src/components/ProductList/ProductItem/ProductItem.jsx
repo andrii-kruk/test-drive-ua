@@ -1,5 +1,4 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { addFavorite, deleteFavorite } from 'redux/favorites/favoritesOperations';
 import { selectFavorites } from 'redux/favorites/favoritesSelectors';
 import RentalModal from 'components/RentalModal/RentalModal';
 import Modal from 'components/Modal/Modal';
@@ -20,6 +19,7 @@ import BtnText from 'components/BtnText/BtnText';
 import BtnIcon from 'components/BtnIcon/BtnIcon';
 import { useState } from 'react';
 import { splittingString, toggleClassName } from 'utils';
+import { addFavorite, deleteFavorite } from 'redux/favorites/favoritesSlice';
 
 const ProductItem = ({ item }) => {
   const {
@@ -40,16 +40,16 @@ const ProductItem = ({ item }) => {
 
   const address = splittingString(item.address, ',');
 
-  const onFavoriteBtn = id => event => {
+  const onFavoriteBtn = item => event => {
     const btn = event.currentTarget;
 
     if (btn.classList.contains('active')) {
       toggleClassName(btn, 'active');
-      dispatch(deleteFavorite(id));
+      dispatch(deleteFavorite(item));
       return;
     }
     toggleClassName(btn, 'active');
-    dispatch(addFavorite(id));
+    dispatch(addFavorite(item));
   };
 
   const toggleModal = () => {
@@ -85,9 +85,9 @@ const ProductItem = ({ item }) => {
           size="s"
           aria="Button favorite"
           icon="#icon-heart"
-          handleClick={onFavoriteBtn(id)}
+          handleClick={onFavoriteBtn(item)}
           secondClass={
-            favorites.some(favorite => favorite.id === id) ? 'active' : ''
+            favorites?.some(favorite => favorite.id === id) ? 'active' : ''
           }
           w="18"
           h="18"

@@ -52,7 +52,7 @@ const Toolbar = () => {
         </ToolbarGroup>
 
         <ToolbarGroup>
-          <ToolbarLabel>Price/ 1 hour</ToolbarLabel>
+          <ToolbarLabel>Price / 1 hour</ToolbarLabel>
           <CustomSelect
             options={prices}
             text="To $"
